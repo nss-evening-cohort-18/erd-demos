@@ -2,7 +2,6 @@ import { database } from "./database.js";
 
 console.log(`the database is: \n ${JSON.stringify(database)}`)
 
-
 // This function takes in a hotel id and will iterate through the rooms
 // and take a total count of rooms have the same hotel_id as the argument,
 // and return the sum

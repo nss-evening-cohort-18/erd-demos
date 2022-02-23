@@ -1,4 +1,8 @@
 
+const today = new Date()
+const tomorrow = today.getDate()+1;
+const dayAfterTomorrow = today.getDate()+2
+
 export const database = {
     hotels: [
         {
@@ -56,6 +60,48 @@ export const database = {
             city: "Nashville",
             state: "TN",
             zip: "01874"
+        },
+        {
+            id: 3,
+            street: "1600 Pennsylvania Ave",
+            city: "Washington",
+            state: "DC",
+            zip: "20001"
+        },
+        {
+            id: 4,
+            street: "1602 Pennsylvania Ave",
+            city: "Washington",
+            state: "DC",
+            zip: "20001"
+        }
+    ],
+    customers: [
+        {
+            id: 1,
+            customer_name: "Alice",
+            address: 3
+        },
+        {
+            id: 2,
+            customer_name: "Bob",
+            address: 4
+        }
+    ],
+    reservations: [
+        {
+            id: 1,
+            start_date: today,
+            end_date: tomorrow,
+            room_id: 1,
+            customer_id: 1
+        },
+        {
+            id: 2,
+            start_date: tomorrow,
+            end_date: dayAfterTomorrow,
+            room_id: 4,
+            customer_id: 2
         }
     ]
 }
